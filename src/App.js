@@ -1,9 +1,8 @@
 import { useEffect, useState } from 'react';
 import axios from 'axios';
-import { getPokemons, getPokemonImages } from './api';
-import PokemonList from './components/PokemonList';
 import Header from './components/Header';
 import PokemonShow from './components/PokemonShow';
+import './App.css';
 
 function App() {
   //Gets All pokemons from api
@@ -35,7 +34,6 @@ function App() {
 
   useEffect(() => {
     getPokemons();
-    getPokemonImages(pokemonIndex);
   }, []);
 
   const changePokemon = () => {
@@ -47,9 +45,12 @@ function App() {
   return (
     <div className='App'>
       <Header />
-      <p>{pokemonIndex}</p>
-      <button onClick={changePokemon}>Change Pokemon</button>
-      <PokemonShow pokemon={currentPokemon} pokemonImage={pokemonImage} />
+      <div className='contents'>
+        <PokemonShow pokemon={currentPokemon} pokemonImage={pokemonImage} />
+        <button className='pokemon-button' onClick={changePokemon}>
+          Click for Pokemon
+        </button>
+      </div>
     </div>
   );
 }

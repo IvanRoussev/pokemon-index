@@ -1,7 +1,7 @@
 function Header() {
   return (
-    <div>
-      <h3>Pokemon Index</h3>
+    <div className='header'>
+      <h1>Pokemon Index</h1>
     </div>
   );
 }

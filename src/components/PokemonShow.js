@@ -3,9 +3,11 @@ function PokemonShow({ pokemon, pokemonImage }) {
     String.fromCharCode(...new Uint8Array(pokemonImage))
   )}`;
   return (
-    <div>
-      <div>Pokemon: {pokemon.name}</div>
-      <img src={imageUrl} alt='pokemon' />
+    <div className='poke-show'>
+      <div className='pokemon-name'>
+        <h2>{pokemon.name}</h2>
+      </div>
+      <img className='pokemon-image' src={imageUrl} alt='pokemon' />
     </div>
   );
 }
