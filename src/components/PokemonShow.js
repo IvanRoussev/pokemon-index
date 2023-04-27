@@ -7,7 +7,7 @@ function PokemonShow({ pokemon, pokemonImage }) {
       <div className='pokemon-name'>
         <h2>{pokemon.name}</h2>
       </div>
-      <img className='pokemon-image' src={imageUrl} alt='pokemon' />
+      <img className='pokemon-image' src={imageUrl} alt='' />
     </div>
   );
 }
